@@ -1,0 +1,16 @@
+##Bài 1 : Loại bỏ rủi ro lưu trữ cục bộ trong dự án nhóm
+### **Phần 1 (Phân tích): 3 hậu quả của "thảm họa dữ liệu truyền thống" mà Nam gặp phải**
+
+* **Dễ mất dữ liệu vĩnh viễn:** Do Nam chỉ lưu file trên máy cá nhân và lỡ tay xóa mất đoạn code quan trọng rồi ấn `Ctrl+S`, lại không có bản backup tự động trên Cloud nên không có cách nào lấy lại đoạn code gốc.
+* **Xung đột và nhầm lẫn phiên bản:** Việc đặt tên kiểu `main_v1.py`, `main_v2_final.py` rồi gửi qua Zalo rất dễ khiến nhóm bị loạn, không biết đâu là bản mới nhất hoặc ai đang sửa cái gì.
+* **Mất thời gian và giảm hiệu suất làm việc:** Thay vì tập trung code, nhóm cứ phải đi hỏi han, đồng bộ file thủ công qua lại rất mất thời gian và dễ xảy ra tình trạng code đè lên nhau.
+
+---
+
+### **Phần 2 (Sửa lỗi): Đề xuất quy trình Hybrid Workflow cho Nam**
+
+Để từ sau dùng *Version History* khôi phục code trong 1-click, Nam nên làm theo các bước sau:
+
+1. **Đưa code lên nền tảng đám mây (Cloud):** Lưu toàn bộ thư mục dự án lên Google Drive, OneDrive hoặc dùng Git (GitHub/GitLab) để lưu trữ thay vì chỉ để trên ổ D của máy cá nhân.
+2. **Bật tính năng lưu lịch sử phiên bản:** Sử dụng tính năng **Version History** (hoặc lịch sử phiên bản) có sẵn trên các dịch vụ Cloud/Git để tự động lưu lại các lần thay đổi code.
+3. **Quy tắc làm việc nhóm:** Từ nay không gửi file `.py` qua Zalo nữa; mọi người sẽ chỉnh sửa trực tiếp trên nền tảng Cloud/Git được tích hợp sẵn Version History, khi cần quay lại bản cũ thì chỉ cần click chọn mốc thời gian trước đó là xong.
